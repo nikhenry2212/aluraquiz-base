@@ -35,6 +35,7 @@ export default function Home() {
   return (
    
     <QuizBackground backgroundImage={db.bg}>
+       <meta property="og:image" content={db.bg}/>
 
       <QuizContainer>
         <QuizLogo/>
@@ -42,7 +43,6 @@ export default function Home() {
           <Widget.Header>
             <Head>
             <h1>Assassins Creed</h1>
-            <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/"></meta>
             </Head>
           </Widget.Header>
           <Widget.Content>
