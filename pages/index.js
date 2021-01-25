@@ -6,6 +6,8 @@ import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
+import Head from 'next/head'
+
 
 
 
@@ -31,12 +33,17 @@ margin: auto 10%;
 
 export default function Home() {
   return (
+   
     <QuizBackground backgroundImage={db.bg}>
+
       <QuizContainer>
         <QuizLogo/>
         <Widget>
           <Widget.Header>
+            <Head>
             <h1>Assassins Creed</h1>
+            <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/"></meta>
+            </Head>
           </Widget.Header>
           <Widget.Content>
             <p>Quiz </p>
