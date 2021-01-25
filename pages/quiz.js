@@ -7,14 +7,6 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 
 
-
-// const BackgroundImage = styled.div`
-// background-image: url(${db.bg});
-// flex: 1;
-// background-size: cover;
-// background-position: center;
-// `
-
 export const QuizContainer = styled.div`
 width: 100%;
 max-width: 350px;
@@ -26,33 +18,24 @@ margin: auto 10%;
 }
 `;
 
-
-
-export default function Home() {
+function Quiz() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <Widget>
-          <Widget.Header>
-            <h1>The lengend of Zelda</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>lorem ipsum dolor sit amet...</p>
-          </Widget.Content>
-        </Widget>
-        <Widget>
-          <Widget.Content>
-            <h1>Quiz da Galera</h1>
-            <Link href="/quiz">
-
-              <a>Entrar</a>
-
+        <Widget.Header>
+              <h1>QUIZ</h1>
+            </Widget.Header>
+            <Widget.Content>
+            <Link href="/">
+                <a>Consegui</a>
             </Link>
           </Widget.Content>
         </Widget>
-        <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/nikhenry2212" />
+      <GitHubCorner projectUrl="https://github.com/nikhenry2212"/>
     </QuizBackground>
-  );
+    
+  )
 }
+export default Quiz;
