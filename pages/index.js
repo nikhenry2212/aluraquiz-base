@@ -35,14 +35,13 @@ export default function Home() {
   return (
    
     <QuizBackground backgroundImage={db.bg}>
-
       <QuizContainer>
         <QuizLogo/>
         <Widget>
           <Widget.Header>
-            <Head>
+            
             <h1>Assassins Creed</h1>
-            </Head>
+
           </Widget.Header>
           <Widget.Content>
             <p>Quiz </p>
