@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import QuizLogo from '../src/components/QuizLogo'
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
@@ -32,6 +33,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo/>
         <Widget>
           <Widget.Header>
             <h1>The lengend of Zelda</h1>
