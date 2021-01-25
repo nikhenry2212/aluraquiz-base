@@ -1,5 +1,5 @@
 {
-  "bg": "https://articles.gamerheadquarters.com/images/top10/movies/10.jpg",
+  "bg": "https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg",
   "title": "Quiz CSS da Alura",
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
@@ -31,11 +31,11 @@
   ],
   "theme": {
     "colors": {
-       "primary": "#4CAF50",   
+       "primary": "#383bc9",   
       "secondary": "#29b6f6",
       "mainBg": "#171B35",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
+      "wrong": "#c93855",
       "success": "#0d47a1"
     },
     "borderRadius": "4px"

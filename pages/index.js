@@ -36,10 +36,10 @@ export default function Home() {
         <QuizLogo/>
         <Widget>
           <Widget.Header>
-            <h1>The lengend of Zelda</h1>
+            <h1>Assassins Creed</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Quiz </p>
           </Widget.Content>
         </Widget>
         <Widget>
