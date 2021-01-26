@@ -34,10 +34,11 @@ export default function Home() {
   // eslint-disable-next-line no-console
   console.log('retorno do useState', name, setName);
   return (
-
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Assassins Creed</title>
+        <meta name="title" content="Assassins Creed" />
+        <meta name="description" content="" />
         <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" />
       </Head>
       <QuizContainer>
