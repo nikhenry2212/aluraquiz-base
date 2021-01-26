@@ -28,7 +28,7 @@ export default function Home() {
         {/* <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/" /> */}
         <meta property="og:title" content="Assassins Creed" />
         <meta property="og:description" content="teste" />
-        <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" />
+        <meta property="og:image" content={db.bg} />
       </Head>
       <QuizContainer>
         <Widget>
