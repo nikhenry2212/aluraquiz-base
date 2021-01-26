@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Head from 'next/head';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
@@ -22,6 +23,11 @@ function Quiz() {
   return (
 
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Assassins Creed</title>
+        <meta property="og:title" content="Assasins Creed" key="title" />
+        <meta property="og:image" content={db.bg} />
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
