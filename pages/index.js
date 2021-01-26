@@ -1,9 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
-import Link from 'next/link';
-
 import QuizLogo from '../src/components/QuizLogo';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -30,6 +29,9 @@ margin: auto 10%;
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+  console.log('retorno do useState', name, setName);
   return (
 
     <QuizBackground backgroundImage={db.bg}>
@@ -44,17 +46,31 @@ export default function Home() {
             <h1>Assassins Creed</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Quiz </p>
+            <form onSubmit={function (event) {
+              event.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo um submit no react');
+              // router manda para próxima pagina
+            }}
+            >
+              <input
+                onChange={function (event) {
+                  console.log(event.target.value);
+                  // State
+                  // name = event.target.value;
+                  setName(event.target.value);
+                }}
+                placeholder="Diz ai seu nome..."
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogar
+                {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>
-          <Widget.Content>
-            <h1>Quiz da Galera</h1>
-            <Link href="/quiz">
-              {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>Entrar</a>
-            </Link>
-          </Widget.Content>
+          <Widget.Content />
         </Widget>
         <Footer />
       </QuizContainer>
