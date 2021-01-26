@@ -25,7 +25,7 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Assassins Creed</title>
-        <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/" />
+        {/* <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/" /> */}
         <meta property="og:title" content="Assassins Creed" />
         <meta property="og:description" content="teste" />
         <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" />
