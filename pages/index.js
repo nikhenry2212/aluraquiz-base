@@ -37,9 +37,9 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Assassins Creed</title>
-        <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" />
-        <meta property="og:title" content="Assassins Creed" />
-        <meta property="og:description" content="Teste" />
+        {/* <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" /> */}
+        <meta property="og:title" content="Assins Creed" key="title" />
+        <meta property="og:image" content={db.bg} />
       </Head>
       <QuizContainer>
         <QuizLogo />
