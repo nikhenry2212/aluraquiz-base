@@ -19,7 +19,7 @@ margin: auto 10%;
 }
 `;
 
-function Quiz() {
+export default function Home() {
   return (
 
     <QuizBackground backgroundImage={db.bg}>
@@ -47,4 +47,3 @@ function Quiz() {
 
   );
 }
-export default Quiz;
