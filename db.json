@@ -9,20 +9,22 @@
       "description": "Essa é pra aquecer",
       "answer": 1,
       "alternatives": [
-        ".elemento", 
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Belzebu", 
+        "Jitars",
+        "Poring",
+        "Cavaleiro do Abismo"
       ]
     },
     {
-      "image": "https://64.media.tumblr.com/tumblr_luwo7zhVoz1qziv5qo1_500.gifv",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://browiki.org/images/b/b7/Arremessar_Pedra.gif",
+      "title": "Qual Char é?",
+      "description": "Uns dos mais Apelões",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Sacerdote",
+         "Espadachim",
+         "Arruaceiro",
+         "Gatuno"
       ]
     }
   ],
