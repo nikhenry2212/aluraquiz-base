@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
@@ -70,8 +71,7 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <h1>Quizes da Galera</h1>
-
-            <p>lorem ipsum dolor sit amet...</p>
+            <p><h2>Links em manutenção</h2></p>
           </Widget.Content>
         </Widget>
         <Footer />
