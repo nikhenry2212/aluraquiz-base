@@ -1,22 +1,22 @@
 {
-  "bg": "https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "bg": "https://www.itl.cat/pngfile/big/294-2946157_background-ragnarok.jpg",
+  "title": "Ragnarok",
+  "description": "Até onde vai seus conhecimentos de RAGNAROK?",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://i.gifer.com/EYl7.gif",
+      "title": "Nome deste Bicho?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        ".elemento",
+        ".elemento", 
         "*elemento",
         "#elemento",
         "%elemento"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+      "image": "https://64.media.tumblr.com/tumblr_luwo7zhVoz1qziv5qo1_500.gifv",
       "title": "Como fazer um background gradiente com css?",
       "description": "Faz tempo em haha",
       "answer": 0,
@@ -32,7 +32,7 @@
   "theme": {
     "colors": {
        "primary": "#383bc9",   
-      "secondary": "#29b6f6",
+      "secondary": "#f2443c",
       "mainBg": "#171B35",
       "contrastText": "#FFFFFF",
       "wrong": "#c93855",

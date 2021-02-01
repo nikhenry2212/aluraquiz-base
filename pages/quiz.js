@@ -1,54 +1,82 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import styled from 'styled-components';
-import Link from 'next/link';
-import Head from 'next/head';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
+import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
+import Button from '../src/components/Button';
 
-export const QuizContainer = styled.div`
-width: 100%;
-max-width: 350px;
-padding-top: 45px;
-margin: auto 10%;
-@media screen and (max-width: 500px) {
-  margin: auto;
-  padding: 15px;
-}
-`;
-
-export default function Home() {
+function LoadingWidget() {
   return (
+    <Widget>
+      <Widget.Header>
+        Carregando...
+      </Widget.Header>
 
+      <Widget.Content>
+        [Desafio do Loading]
+      </Widget.Content>
+    </Widget>
+  );
+}
+function QuestionWidget({
+  question,
+  questionIndex,
+  totalQuestions,
+}) {
+  return (
+    <Widget>
+      <Widget.Header>
+        {/* <BackLinkArrow href="/" /> */}
+        <h3>
+          {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
+        </h3>
+      </Widget.Header>
+
+      <img
+        alt="Descrição"
+        style={{
+          width: '100%',
+          height: '150px',
+          objectFit: 'cover',
+        }}
+        src={question.image}
+      />
+      <Widget.Content>
+        <h2>
+          {question.title}
+        </h2>
+        <p>
+          {question.description}
+        </p>
+
+        <Button type="submit">
+          Confirmar
+        </Button>
+      </Widget.Content>
+    </Widget>
+  );
+}
+
+export default function QuizPage() {
+  // console.log('Perguntas:', db.questions);
+  const totalQuestions = db.questions.length;
+  const questionIndex = 1;
+  const question = db.questions[questionIndex];
+
+  return (
     <QuizBackground backgroundImage={db.bg}>
-      <Head>
-        <title>Assassins Creed</title>
-        <meta name="title" content="Assassins Creed" />
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/" />
-        <meta property="og:description" content="teste Creed" />
-        <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" />
-
-      </Head>
       <QuizContainer>
-        <Widget>
-          <Widget.Header>
-            <h1>QUIZ</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <Link href="/">
-              {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a>Consegui</a>
-            </Link>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/nikhenry2212" />
-    </QuizBackground>
+        <QuizLogo />
 
+        <QuestionWidget
+          question={question}
+          questionIndex={questionIndex}
+          totalQuestions={totalQuestions}
+        />
+        <LoadingWidget />
+      </QuizContainer>
+    </QuizBackground>
   );
 }

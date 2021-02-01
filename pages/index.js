@@ -1,86 +1,78 @@
 import React from 'react';
-
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
-import QuizLogo from '../src/components/QuizLogo';
+import { useRouter } from 'next/router';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 // const BackgroundImage = styled.div`
-// background-image: url(${db.bg});
-// flex: 1;
-// background-size: cover;
-// background-position: center;
-// `
+//   background-image: url(${db.bg});
+//   flex: 1;
+//   background-size: cover;
+//   background-position: center;
+// `;
 
-export const QuizContainer = styled.div`
-width: 100%;
-max-width: 350px;
-padding-top: 45px;
-margin: auto 10%;
-@media screen and (max-width: 500px) {
-  margin: auto;
-  padding: 15px;
-}
+const QuizContainer = styled.div`
+  width: 100%;
+  max-width: 350px;
+  padding-top: 45px;
+  margin: auto 10%;
+  @media screen and (max-width: 500px) {
+    margin: auto;
+    padding: 15px;
+  }
 `;
 
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
-  // eslint-disable-next-line no-console
-  console.log('retorno do useState', name, setName);
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Assassins Creed</title>
-        <meta name="title" content="Assassins Creed" />
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aluraquiz-base.nikhenry2212.vercel.app/" />
-        <meta property="og:description" content="teste Creed" />
-        <meta property="og:image" content="https://articles.gamerheadquarters.com/images/top10/xbox/assassinscreed/brotherhood.jpg" />
-
+        <title>{db.title}</title>
       </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Assassins Creed</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            {/*  eslint-disable-next-line func-names */}
-            <form onSubmit={function (event) {
-              event.preventDefault();
+            <p>{db.description}</p>
+            {/* eslint-disable-next-line func-names */}
+            <form onSubmit={function (infosDoEvento) {
+              infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
-              // eslint-disable-next-line no-console
-              console.log('Fazendo um submit no react');
-              // router manda para próxima pagina
+              console.log('Fazendo uma submissão por meio do react');
             }}
             >
-              <input
-                // eslint-disable-next-line func-names
-                onChange={function (event) {
-                  // eslint-disable-next-line no-console
-                  console.log(event.target.value);
-                  // State
-                  // name = event.target.value;
-                  setName(event.target.value);
-                }}
-                placeholder="Diz ai seu nome..."
+              <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
+                placeholder="Diz ai seu nome"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Jogar ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
+
         <Widget>
-          <Widget.Content />
+          <Widget.Content>
+            <h1>Quizes da Galera</h1>
+
+            <p>lorem ipsum dolor sit amet...</p>
+          </Widget.Content>
         </Widget>
         <Footer />
       </QuizContainer>
