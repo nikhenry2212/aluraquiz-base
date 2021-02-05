@@ -55,7 +55,8 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        {/*  eslint-disable-next-line jsx-a11y/alt-text */}
+        <img src="https://c.tenor.com/Bm0n9x-LYkgAAAAj/bomb-poring-ragnarok.gif" />
       </Widget.Content>
     </Widget>
   );
