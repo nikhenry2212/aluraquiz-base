@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import db from '../db.json';
@@ -55,8 +56,15 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        {/*  eslint-disable-next-line jsx-a11y/alt-text */}
-        <img src="https://c.tenor.com/Bm0n9x-LYkgAAAAj/bomb-poring-ragnarok.gif" />
+        <p>
+          {/*  eslint-disable-next-line jsx-a11y/alt-text */}
+          ....Carregando
+          <img src="https://c.tenor.com/Bm0n9x-LYkgAAAAj/bomb-poring-ragnarok.gif" />
+          <img src="https://c.tenor.com/Bm0n9x-LYkgAAAAj/bomb-poring-ragnarok.gif" />
+          <img src="https://c.tenor.com/Bm0n9x-LYkgAAAAj/bomb-poring-ragnarok.gif" />
+          <img src="https://c.tenor.com/Bm0n9x-LYkgAAAAj/bomb-poring-ragnarok.gif" />
+
+        </p>
       </Widget.Content>
     </Widget>
   );
